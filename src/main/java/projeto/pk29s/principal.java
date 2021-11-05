@@ -118,7 +118,6 @@ public class Principal extends javax.swing.JFrame {
         Pesquisa pesquisa = new Pesquisa();
         try {
             pesquisa.setVisible(true);
-            pesquisa.setMaximum(true);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
@@ -131,7 +130,6 @@ public class Principal extends javax.swing.JFrame {
         Cadastro cadastro = new Cadastro();
         try {
             cadastro.setVisible(true);
-            cadastro.setMaximum(true);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
@@ -144,7 +142,6 @@ public class Principal extends javax.swing.JFrame {
         Edicao edicao = new Edicao();
         try {
             edicao.setVisible(true);
-            edicao.setMaximum(true);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
