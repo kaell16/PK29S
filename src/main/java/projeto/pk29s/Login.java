@@ -98,6 +98,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEmailActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        Principal principal = new Principal();
+        principal.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnEntrarActionPerformed
 

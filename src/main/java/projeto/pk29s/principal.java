@@ -52,6 +52,11 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(mnSair);
 
         jMenu2.setText("Opções");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
 
         mnPesquisa.setText("Pesquisa");
         mnPesquisa.addActionListener(new java.awt.event.ActionListener() {
@@ -109,24 +114,44 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnPesquisaActionPerformed
-        // TODO add your handling code here:
+        Pesquisa pesquisa = new Pesquisa();
+        pesquisa.setVisible(true);
+        
+        desktopPane.add(pesquisa);
+        this.setContentPane(desktopPane);
     }//GEN-LAST:event_mnPesquisaActionPerformed
 
     private void mnCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnCadastroActionPerformed
-        // TODO add your handling code here:
+        Cadastro cadastro = new Cadastro();
+        cadastro.setVisible(true);
+        
+        desktopPane.add(cadastro);
+        this.setContentPane(desktopPane);
     }//GEN-LAST:event_mnCadastroActionPerformed
 
     private void mnEdicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnEdicaoActionPerformed
-        // TODO add your handling code here:
+        Edicao edicao = new Edicao();
+        edicao.setVisible(true);
+        
+        desktopPane.add(edicao);
+        this.setContentPane(desktopPane);
     }//GEN-LAST:event_mnEdicaoActionPerformed
 
     private void mnOcorrenciasFrequentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnOcorrenciasFrequentesActionPerformed
-    
+        OcorrenciasFrequentes ocorrencias = new OcorrenciasFrequentes();
+        ocorrencias.setVisible(true);
+        
+        desktopPane.add(ocorrencias);
+        this.setContentPane(desktopPane);
     }//GEN-LAST:event_mnOcorrenciasFrequentesActionPerformed
 
     private void mnSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mnSairMouseClicked
         System.exit(0);
     }//GEN-LAST:event_mnSairMouseClicked
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        
+    }//GEN-LAST:event_jMenu2ActionPerformed
 
     /**
      * @param args the command line arguments
