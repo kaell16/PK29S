@@ -26,25 +26,147 @@ public class Pesquisa extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setClosable(true);
-        setIconifiable(true);
-        setTitle("Pesquisa de Ocorrência");
+        btnPesquisa = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lstResultados = new javax.swing.JList<>();
+        lblData = new javax.swing.JLabel();
+        txtData = new javax.swing.JTextField();
+        lblLocal = new javax.swing.JLabel();
+        txtLocal = new javax.swing.JTextField();
+        lblTipo = new javax.swing.JLabel();
+        cmbTipo = new javax.swing.JComboBox<>();
+        lblOcorrencia = new javax.swing.JLabel();
+        txtOcorrencia = new javax.swing.JTextField();
+
+        btnPesquisa.setText("Pesquisar");
+        btnPesquisa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPesquisaActionPerformed(evt);
+            }
+        });
+
+        jScrollPane1.setViewportView(lstResultados);
+
+        lblData.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblData.setText("Data");
+
+        txtData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDataActionPerformed(evt);
+            }
+        });
+
+        lblLocal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblLocal.setText("Local");
+
+        txtLocal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLocalActionPerformed(evt);
+            }
+        });
+
+        lblTipo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblTipo.setText("Tipo");
+
+        cmbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ameaça", "Estelionato", "Roubo", "Furto", "Acidente de trânsito", "Desaparecimento", "Encontro de pessoas", "Injúria, calúnia ou difamação" }));
+
+        lblOcorrencia.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblOcorrencia.setText("Ocorrencia");
+
+        txtOcorrencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtOcorrenciaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblData)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblLocal)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtLocal)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblTipo))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblOcorrencia)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtOcorrencia, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cmbTipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnPesquisa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cmbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblTipo)
+                        .addComponent(lblLocal)
+                        .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblData))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblOcorrencia)
+                            .addComponent(txtOcorrencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(btnPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        setBounds(0, 0, 406, 307);
+        pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPesquisaActionPerformed
+
+    private void txtDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDataActionPerformed
+
+    private void txtOcorrenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOcorrenciaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtOcorrenciaActionPerformed
+
+    private void txtLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLocalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLocalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnPesquisa;
+    private javax.swing.JComboBox<String> cmbTipo;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblData;
+    private javax.swing.JLabel lblLocal;
+    private javax.swing.JLabel lblOcorrencia;
+    private javax.swing.JLabel lblTipo;
+    private javax.swing.JList<String> lstResultados;
+    private javax.swing.JTextField txtData;
+    private javax.swing.JTextField txtLocal;
+    private javax.swing.JTextField txtOcorrencia;
     // End of variables declaration//GEN-END:variables
 }
