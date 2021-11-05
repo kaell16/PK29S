@@ -56,7 +56,11 @@ public class Login extends javax.swing.JFrame {
 
         lblSenha.setText("Senha");
 
-        pwSenha.setText("jPasswordField1");
+        pwSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pwSenhaActionPerformed(evt);
+            }
+        });
 
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -117,8 +121,14 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        
+        CadastroUsuario cadastro = new CadastroUsuario();
+        cadastro.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnCadastrarActionPerformed
+
+    private void pwSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwSenhaActionPerformed
 
     /**
      * @param args the command line arguments

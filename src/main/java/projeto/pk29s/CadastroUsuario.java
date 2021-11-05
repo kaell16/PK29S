@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package projeto.pk29s;
 
@@ -8,13 +8,12 @@ package projeto.pk29s;
  *
  * @author luiss
  */
-public class CadastroUsuario extends javax.swing.JDialog {
+public class CadastroUsuario extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJDialog
+     * Creates new form CadastroUsuario2
      */
-    public CadastroUsuario(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public CadastroUsuario() {
         initComponents();
     }
 
@@ -27,6 +26,7 @@ public class CadastroUsuario extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnCancelar = new javax.swing.JButton();
         lblNome = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
         lblSenha = new javax.swing.JLabel();
@@ -36,9 +36,16 @@ public class CadastroUsuario extends javax.swing.JDialog {
         txtEmail = new javax.swing.JTextField();
         txtNome = new javax.swing.JTextField();
         btnConfirmar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         lblNome.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblNome.setText("Nome");
@@ -65,11 +72,9 @@ public class CadastroUsuario extends javax.swing.JDialog {
         });
 
         btnConfirmar.setText("Cadastrar");
-
-        btnCancelar.setText("Cancelar");
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+        btnConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
+                btnConfirmarActionPerformed(evt);
             }
         });
 
@@ -78,7 +83,7 @@ public class CadastroUsuario extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(106, Short.MAX_VALUE)
+                .addContainerGap(105, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblSenhaConfirmar)
                     .addComponent(lblSenha)
@@ -117,23 +122,32 @@ public class CadastroUsuario extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnConfirmar)
                     .addComponent(btnCancelar))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(495, 402));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        Login login = new Login();
+        login.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSenhaActionPerformed
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCancelarActionPerformed
+    }//GEN-LAST:event_txtEmailActionPerformed
+
+    private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
+        Principal principal = new Principal();
+        principal.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnConfirmarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,17 +177,10 @@ public class CadastroUsuario extends javax.swing.JDialog {
         //</editor-fold>
         //</editor-fold>
 
-        /* Create and display the dialog */
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                CadastroUsuario dialog = new CadastroUsuario(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
+                new CadastroUsuario().setVisible(true);
             }
         });
     }
