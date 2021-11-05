@@ -11,12 +11,12 @@ import javax.swing.JDesktopPane;
  *
  * @author kaell
  */
-public class principal extends javax.swing.JFrame {
+public class Principal extends javax.swing.JFrame {
 
     /**
      * Creates new form principal
      */
-    public principal() {
+    public Principal() {
         initComponents();
     }
 
@@ -41,7 +41,7 @@ public class principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gerenciador de Ocorrências");
-        setName("principal"); // NOI18N
+        setName(""); // NOI18N
 
         mnSair.setText("Sair");
         mnSair.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,14 +97,15 @@ public class principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 793, Short.MAX_VALUE)
+            .addGap(0, 710, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 445, Short.MAX_VALUE)
+            .addGap(0, 470, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(724, 528));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnPesquisaActionPerformed
@@ -120,7 +121,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_mnEdicaoActionPerformed
 
     private void mnOcorrenciasFrequentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnOcorrenciasFrequentesActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_mnOcorrenciasFrequentesActionPerformed
 
     private void mnSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mnSairMouseClicked
@@ -144,20 +145,21 @@ public class principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new principal().setVisible(true);
+                new Principal().setVisible(true);
             }
         });
     }
