@@ -18,6 +18,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -115,23 +116,38 @@ public class Principal extends javax.swing.JFrame {
 
     private void mnPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnPesquisaActionPerformed
         Pesquisa pesquisa = new Pesquisa();
-        pesquisa.setVisible(true);
-        
+        try {
+            pesquisa.setVisible(true);
+            pesquisa.setMaximum(true);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+                
         desktopPane.add(pesquisa);
         this.setContentPane(desktopPane);
     }//GEN-LAST:event_mnPesquisaActionPerformed
 
     private void mnCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnCadastroActionPerformed
         Cadastro cadastro = new Cadastro();
-        cadastro.setVisible(true);
-        
+        try {
+            cadastro.setVisible(true);
+            cadastro.setMaximum(true);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+         
         desktopPane.add(cadastro);
         this.setContentPane(desktopPane);
     }//GEN-LAST:event_mnCadastroActionPerformed
 
     private void mnEdicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnEdicaoActionPerformed
         Edicao edicao = new Edicao();
-        edicao.setVisible(true);
+        try {
+            edicao.setVisible(true);
+            edicao.setMaximum(true);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
         
         desktopPane.add(edicao);
         this.setContentPane(desktopPane);
@@ -139,8 +155,13 @@ public class Principal extends javax.swing.JFrame {
 
     private void mnOcorrenciasFrequentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnOcorrenciasFrequentesActionPerformed
         OcorrenciasFrequentes ocorrencias = new OcorrenciasFrequentes();
-        ocorrencias.setVisible(true);
-        
+        try {
+            ocorrencias.setVisible(true);
+            ocorrencias.setMaximum(true);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+                
         desktopPane.add(ocorrencias);
         this.setContentPane(desktopPane);
     }//GEN-LAST:event_mnOcorrenciasFrequentesActionPerformed

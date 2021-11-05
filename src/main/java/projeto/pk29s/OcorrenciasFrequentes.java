@@ -32,7 +32,9 @@ public class OcorrenciasFrequentes extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
+        setResizable(true);
         setTitle("Ocorrências frequentes");
+        setToolTipText("");
 
         lstRelatorio.setToolTipText("");
         jScrollPane1.setViewportView(lstRelatorio);
@@ -50,11 +52,9 @@ public class OcorrenciasFrequentes extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        setBounds(0, 0, 644, 423);
     }// </editor-fold>//GEN-END:initComponents
 
 

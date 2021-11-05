@@ -38,6 +38,8 @@ public class Cadastro extends javax.swing.JInternalFrame {
         btnCadastrar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
 
+        setClosable(true);
+        setTitle("Cadastro de Ocorrência");
         setPreferredSize(new java.awt.Dimension(775, 459));
 
         txtData.addActionListener(new java.awt.event.ActionListener() {
